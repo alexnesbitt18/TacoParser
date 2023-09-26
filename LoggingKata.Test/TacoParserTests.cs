@@ -37,8 +37,13 @@ namespace LoggingKata.Test
             Assert.Equal(expected, actual.Location.Longitude);
         }
 
-
         //TODO: Create a test ShouldParseLatitude
+        public void ShouldParseLatitude(string line, double expected)
+        {
+            var tacoParserInstance = new TacoParser();
+            var actual = tacoParserInstance.Parse(line);
+            Assert.Equal(expected, actual.Location.Latitude);
+        }
 
     }
 }

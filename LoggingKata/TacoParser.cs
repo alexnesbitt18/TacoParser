@@ -18,7 +18,9 @@
             if (cells.Length < 3)
             {
                 // Log that and return null --Done
+
                 logger.LogWarning("Less than 3 items, incomplete dataset.");
+
                 // Do not fail if one record parsing fails, return null --Done
                 return null; // TODO Implement
             }
